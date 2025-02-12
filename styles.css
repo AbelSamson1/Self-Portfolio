@@ -1,0 +1,271 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: Lato,sans-serif;
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+  background: linear-gradient(135deg, #3d6dacdc, #275e5edf);
+  color: #050505;
+  font-size: 1rem;
+  font-weight: bold;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff5f9e;
+  border-radius: 10px;
+}
+
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10%;
+  background: rgba(29, 91, 154, 0.664);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 1000;
+}
+
+.personal__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff5f9e;
+}
+
+.nav__link--list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav__link--anchor {
+  color: #070707;
+  font-size: 1.3rem;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav__link--anchor:hover {
+  color: #ff5f9e;
+}
+
+/* ABOUT ME SECTION */
+
+#about-me {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 10%;
+}
+
+.about-me__img{
+  display: flex;
+  width: 550px;
+  height: 550px;
+  padding: 8rem 10%;
+}
+
+.about-me__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  width: 100%;
+}
+
+.about-me__picture--mask {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 8px solid #ff5f9e;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+}
+
+.about-me__picture {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+/* Hover Animation for Profile Image */
+.about-me__picture--mask:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0px 0px 30px #ff5f9e;
+}
+
+.about-me__picture--mask:hover .about-me__picture {
+  transform: scale(1.2);
+}
+
+.about-me__info--title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ff5f9e;
+}
+
+.about-me__info--para {
+  font-size: 1.5rem;
+  color: #0e0e0e;
+  width: 700px;
+}
+.text--grey{
+  color:#ff5f9e
+}
+
+
+.about-me__links {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.about-me__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px; /* Adjust size as needed */
+  height: 70px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  overflow: hidden; 
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-me__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-me__link:hover {
+  transform: scale(1.1);
+  background: #ff5f9e; /* Color change on hover */
+}
+
+
+.about-me__link:hover {
+  background: #ff5f9e;
+}
+
+/* TECHNOLOGIES SECTION */
+#languages {
+  text-align: center;
+  padding: 6rem 10%;
+}
+
+.section__title {
+  font-size: 3rem;
+  color: #ff5f9e;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text;
+
+}
+
+.language__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.language {
+  background: rgba(226, 11, 11, 0.1);
+  padding: 30px;
+  border: radius 2px;;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.language:hover {
+  transform: scale(1.15);
+}
+
+.language__img {
+  width: 90px;
+}
+
+/* PROJECTS SECTION */
+#projects {
+  text-align: center;
+  padding: 6rem 10%;
+}
+
+.project__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.project {
+  background: rgba(226, 11, 11, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  max-width: 400px;
+  transition: 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.project__img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.project__description--title {
+  font-size: 1.8rem;
+  margin: 15px 0;
+  color: #ff5f9e;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: #1e1e2f;
+  text-align: center;
+  padding: 40px;
+}
+
+.footer__social--link {
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0 20px;
+}
+.footer__logo--popper{
+  color: #ff5f9e;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.footer__social--link:hover {
+  color: #ff5f9e;
+}
